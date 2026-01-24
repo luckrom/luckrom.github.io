@@ -20,268 +20,194 @@
         }
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 4rem 0 3rem;
+            padding: 3rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .header-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            background-image: 
-                linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-                linear-gradient(#eee .1em, transparent .1em);
-            background-size: 100% 1.2em;
         }
         .logo {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 0.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        .logo::after {
-            content: '';
-            position: absolute;
-            width: 40%;
-            height: 5px;
-            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
-            bottom: -10px;
-            left: 30%;
-            border-radius: 5px;
+            margin-bottom: 1rem;
         }
         .tagline {
-            font-size: clamp(1rem, 2vw, 1.3rem);
+            font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         .btn-primary {
             display: inline-block;
             background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
             color: #1e3c72;
-            padding: 0.9rem 2.2rem;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 5px 20px rgba(0, 201, 255, 0.3);
-            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 201, 255, 0.3);
         }
         .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 201, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 201, 255, 0.4);
         }
-        main { padding: 5rem 0; }
+        main { padding: 3rem 0; }
         .section-title {
             text-align: center;
-            margin-bottom: 3.5rem;
-            position: relative;
+            margin-bottom: 2.5rem;
         }
         .section-title h2 {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-size: 2.2rem;
             color: #1e3c72;
-            display: inline-block;
-            padding-bottom: 1rem;
-        }
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
+            margin-bottom: 1rem;
         }
         .section-subtitle {
-            text-align: center;
-            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-size: 1.1rem;
             color: #64748b;
             max-width: 700px;
-            margin: 1.5rem auto 0;
-            line-height: 1.8;
+            margin: 0 auto;
+            line-height: 1.6;
         }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .feature-card {
+        .why-choose {
             background: white;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            height: 100%;
-            border: 1px solid #e2e8f0;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-icon {
-            height: 80px;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        .why-choose-content {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.5rem;
+            gap: 2rem;
         }
-        .feature-content {
-            padding: 1.8rem;
+        .why-icon {
+            font-size: 4rem;
+            flex-shrink: 0;
         }
-        .feature-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+        .why-text h3 {
+            font-size: 1.5rem;
             color: #1e3c72;
+            margin-bottom: 1rem;
         }
-        .feature-content p {
-            color: #64748b;
-            line-height: 1.7;
+        .why-text ul {
+            list-style: none;
+        }
+        .why-text li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .why-text li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00c9ff;
+            font-weight: bold;
         }
         .resources {
-            margin-top: 5rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 4rem 0;
-            border-radius: 20px;
+            margin-top: 4rem;
         }
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.8rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         .resource-item {
             background: white;
-            border-radius: 12px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            border-left: 4px solid #00c9ff;
         }
         .resource-item:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            border-left-color: #92fe9d;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
         .resource-item h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
             color: #1e3c72;
+            margin-bottom: 0.8rem;
         }
         .resource-item p {
             color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
         .resource-tag {
             display: inline-block;
             background: #e0f7fa;
             color: #00796b;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 600;
         }
         footer {
             background: #1e293b;
             color: #cbd5e1;
-            padding: 3rem 0;
-            margin-top: 5rem;
-        }
-        .footer-content {
+            padding: 2.5rem 0;
+            margin-top: 4rem;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1rem;
-        }
-        .footer-tagline {
-            font-size: 1rem;
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            line-height: 1.6;
         }
         .copyright {
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
             font-size: 0.9rem;
+            color: #94a3b8;
         }
         @media (max-width: 768px) {
-            header { padding: 3rem 0 2rem; }
-            .btn-primary { padding: 0.8rem 1.8rem; font-size: 1rem; }
-            main { padding: 3rem 0; }
-            .features, .resource-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .logo { font-size: 2.2rem; }
+            .tagline { font-size: 1rem; }
+            .btn-primary { padding: 0.7rem 1.5rem; font-size: 1rem; }
+            .section-title h2 { font-size: 1.8rem; }
+            .why-choose-content { flex-direction: column; text-align: center; }
+            .why-icon { font-size: 3rem; }
+            .resource-grid { grid-template-columns: 1fr; }
+            .why-text li { text-align: left; }
         }
         @media (max-width: 480px) {
             .container { padding: 0 15px; }
-            header { padding: 2.5rem 0 1.8rem; }
-            .logo { font-size: 2.2rem; }
-            .section-title h2 { font-size: 1.8rem; }
-            .feature-content { padding: 1.5rem; }
+            header { padding: 2rem 0; }
+            .why-choose { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-bg"></div>
         <div class="container">
             <h1 class="logo">静态资源库</h1>
-            <p class="tagline">提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片、UI组件等，每日更新，助力开发者高效完成项目。</p>
+            <p class="tagline">提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等，每日更新，助力开发者高效完成项目。</p>
             <a href="https://static-resources.com" class="btn-primary">进入官网</a>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <section class="intro-section">
+            <section class="why-section">
                 <div class="section-title">
                     <h2>为什么选择静态资源库？</h2>
                     <p class="section-subtitle">我们致力于为开发者提供最优质、最全面的静态资源，所有资源都经过严格测试，确保兼容性和性能</p>
                 </div>
                 
-                <div class="features">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <div class="feature-content">
-                            <h3>高质量资源</h3>
-                            <p>所有资源都经过专业筛选和测试，确保代码质量、兼容性和性能，节省您的开发时间。</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <div class="feature-content">
-                            <h3>快速下载</h3>
-                            <p>采用全球CDN加速，确保资源在全球范围都能快速加载，提升您的开发效率。</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">🆓</div>
-                        <div class="feature-content">
-                            <h3>完全免费</h3>
-                            <p>所有资源均免费提供，无需注册，无需订阅，直接下载使用，无任何隐藏费用。</p>
+                <div class="why-choose">
+                    <div class="why-choose-content">
+                        <div class="why-icon">🚀</div>
+                        <div class="why-text">
+                            <h3>一站式静态资源解决方案</h3>
+                            <ul>
+                                <li><strong>高质量资源</strong> - 所有资源都经过专业筛选和测试，确保代码质量、兼容性和性能</li>
+                                <li><strong>快速下载</strong> - 采用全球CDN加速，确保资源在全球范围都能快速加载</li>
+                                <li><strong>完全免费</strong> - 无需注册，无需订阅，直接下载使用，无任何隐藏费用</li>
+                                <li><strong>持续更新</strong> - 每日更新最新资源，紧跟技术发展趋势</li>
+                                <li><strong>详细文档</strong> - 每个资源都配有详细的使用说明和示例代码</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -311,12 +237,6 @@
                         <p>矢量图标集、图标字体、SVG图标、字体文件等视觉资源，支持多种格式。</p>
                         <span class="resource-tag">623个资源</span>
                     </div>
-                    
-                    <div class="resource-item">
-                        <h4>背景与图片</h4>
-                        <p>网页背景图案、纹理、渐变背景、占位图片、无版权图片资源。</p>
-                        <span class="resource-tag">289个资源</span>
-                    </div>
                 </div>
             </section>
         </div>
@@ -324,21 +244,17 @@
     
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">静态资源库</div>
-                <p class="footer-tagline">致力于为全球开发者提供高质量免费静态资源，助力高效开发</p>
-                <div class="copyright">
-                    <p>&copy; 2023 静态资源库. 保留所有权利. 京ICP备12345678号</p>
-                </div>
+            <div class="copyright">
+                <p>&copy; 2023 静态资源库. 保留所有权利. 京ICP备12345678号</p>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.btn-primary');
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
+            const btn = document.querySelector('.btn-primary');
+            if(btn) {
+                btn.addEventListener('click', function(e) {
                     const ripple = document.createElement('span');
                     const rect = this.getBoundingClientRect();
                     const size = Math.max(rect.width, rect.height);
@@ -350,7 +266,7 @@
                         border-radius: 50%;
                         background: rgba(255, 255, 255, 0.7);
                         transform: scale(0);
-                        animation: ripple-animation 0.6s linear;
+                        animation: ripple 0.6s linear;
                         width: ${size}px;
                         height: ${size}px;
                         top: ${y}px;
@@ -358,21 +274,18 @@
                         pointer-events: none;
                     `;
                     
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
                     this.appendChild(ripple);
                     
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
+                    setTimeout(() => ripple.remove(), 600);
                 });
-            });
+            }
             
             const style = document.createElement('style');
             style.textContent = `
-                @keyframes ripple-animation {
-                    to {
-                        transform: scale(4);
-                        opacity: 0;
-                    }
+                @keyframes ripple {
+                    to { transform: scale(4); opacity: 0; }
                 }
             `;
             document.head.appendChild(style);
