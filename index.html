@@ -303,49 +303,35 @@
             font-weight: 600;
         }
         
-        /* 页脚 */
+        /* 简化的页脚样式 */
         footer {
             background: #1e293b;
             color: #cbd5e1;
-            padding: 4rem 0 2rem;
+            padding: 3rem 0;
             margin-top: 5rem;
         }
         
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .footer-section h3 {
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
             color: white;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
         
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background: #00c9ff;
-            bottom: 0;
-            left: 0;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-section ul li a:hover {
-            color: #00c9ff;
+        .footer-tagline {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
         
         .copyright {
-            text-align: center;
             padding-top: 2rem;
             border-top: 1px solid #334155;
             color: #94a3b8;
@@ -587,48 +573,16 @@
         </div>
     </main>
     
-    <!-- 页脚 -->
+    <!-- 简化版页脚 -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>静态资源库</h3>
-                    <p>致力于为全球开发者提供高质量免费静态资源，助力高效开发。</p>
+                <div class="footer-logo">静态资源库</div>
+                <p class="footer-tagline">致力于为全球开发者提供高质量免费静态资源，助力高效开发</p>
+                <div class="copyright">
+                    <p>&copy; 2023 静态资源库. 保留所有权利. 京ICP备12345678号 | 遵循CC BY-NC 4.0许可证</p>
+                    <p>本网站仅提供资源索引，所有资源版权归原作者所有。</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>快速链接</h3>
-                    <ul>
-                        <li><a href="https://static-resources.com">官网首页</a></li>
-                        <li><a href="https://static-resources.com/resources">所有资源</a></li>
-                        <li><a href="https://static-resources.com/new">最新资源</a></li>
-                        <li><a href="https://static-resources.com/popular">热门资源</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>资源分类</h3>
-                    <ul>
-                        <li><a href="https://static-resources.com/css">CSS资源</a></li>
-                        <li><a href="https://static-resources.com/js">JavaScript资源</a></li>
-                        <li><a href="https://static-resources.com/icons">图标字体</a></li>
-                        <li><a href="https://static-resources.com/images">图片资源</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>联系我们</h3>
-                    <ul>
-                        <li>邮箱: contact@static-resources.com</li>
-                        <li>GitHub: @static-resources</li>
-                        <li>Twitter: @static_resources</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 静态资源库. 保留所有权利. 京ICP备12345678号 | 遵循CC BY-NC 4.0许可证</p>
-                <p>本网站仅提供资源索引，所有资源版权归原作者所有。</p>
             </div>
         </div>
     </footer>
@@ -699,7 +653,7 @@
             document.head.appendChild(style);
             
             // 记录页面加载时间（性能监控）
-            window。addEventListener('load', () => {
+            window.addEventListener('load', () => {
                 const timing = performance.timing;
                 const loadTime = timing.loadEventEnd - timing.navigationStart;
                 console.log(`页面加载时间: ${loadTime}ms`);
