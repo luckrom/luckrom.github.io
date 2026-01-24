@@ -3,327 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>静态资源库 | 免费网页开发资源下载中心</title>
-    <meta name="description" content="静态资源库提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等，助力开发者高效完成项目。">
-    <meta name="keywords" content="静态资源,CSS资源,JavaScript插件,免费下载,网页开发,前端资源">
-    <meta name="author" content="静态资源库">
-    <meta name="baidu-site-verification" content="code-xxxx">
-    <meta name="360-site-verification" content="xxxx">
-    <meta name="renderer" content="webkit">
+    
+    <title>资源导航站 - 极速获取优质工具与素材</title>
+    <meta name="keywords" content="静态资源, 免费工具, 素材下载, 资源导航, 极速网站">
+    <meta name="description" content="本站提供高质量的静态资源导航，分类清晰，涵盖技术、设计与生产力工具，致力于为用户提供最快捷的访问体验。">
+    
     <style>
-        /* 重置与基础样式 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* 全局样式与变量 */
+        :root {
+            --primary-color: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-gray: #f9fafb;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6; 
-            color: #333; 
-            background-color: #f8f9fa; 
+            color: var(--text-dark);
+            background-color: #fff;
         }
-        。container {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* 头部 */
+
+        /* 顶部区块 */
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 3rem 0 4rem;
+            padding: 4rem 1rem 3rem;
             text-align: center;
+            background: linear-gradient(to bottom, var(--bg-gray), #fff);
         }
-        。site-name {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        .site-tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
+
+        h1 { font-size: 1.2rem; color: var(--text-light); font-weight: 400; margin-bottom: 0.5rem; }
         
-        /* 进入官网按钮 */
-        .official-btn {
+        .hero-link {
             display: inline-block;
-            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
-            color: #1e3c72;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            padding: 1.2rem 3rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: transform 0.2s;
+            margin: 1rem 0;
+        }
+        .hero-link:hover { transform: scale(1.05); }
+
+        /* 响应式导航栏 */
+        nav {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+        }
+        nav ul li { margin: 0 1rem; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1rem; }
+        nav ul li a:hover { color: var(--primary-color); }
+
+        /* 内容主体 */
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* 模块化功能介绍 (4点介绍) */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .feature-item {
+            padding: 1.5rem;
+            background: var(--bg-gray);
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 201, 255, 0.3);
-            transition: all 0.3s ease;
-            margin: 1.5rem 0;
+            transition: 0.3s;
         }
-        .official-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 201, 255, 0.4);
-        }
-        
-        /* 资源介绍部分 */
-        .intro-section {
-            padding: 4rem 0 3rem;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #1e3c72;
-            margin-bottom: 2.5rem;
-        }
-        
-        /* 资源特点网格 */
-        .features-grid {
+        .feature-item:hover { background: #eff6ff; }
+        .feature-item h3 { margin-bottom: 0.5rem; color: var(--primary-color); }
+
+        /* 资源展示区 (方便后续添加) */
+        .resource-section { margin-bottom: 4rem; }
+        .resource-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
         }
-        .feature-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        .feature-card:hover {
-            transform: translateY(-8px);
-        }
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .feature-title {
-            font-size: 1.3rem;
-            color: #1e3c72;
-            margin-bottom: 0.8rem;
-        }
-        .feature-desc {
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        /* 网站底部 */
-        footer {
-            background-color: #1e293b;
-            color: #cbd5e1;
-            padding: 2.5rem 0;
-            margin-top: 3rem;
-        }
-        .site-intro {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .intro-title {
-            font-size: 1.5rem;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* 网站介绍点 */
-        .intro-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .intro-point {
-            background: rgba(255, 255, 255, 0.05);
+        .card {
+            border: 1px solid #eee;
             padding: 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid #00c9ff;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-        .point-title {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-        }
-        .point-desc {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        /* 底部版权 */
-        .copyright {
+        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-color: var(--primary-color); }
+
+        /* 页脚设计 */
+        footer {
+            margin-top: 5rem;
+            padding: 2rem 1rem;
+            background: var(--bg-gray);
             text-align: center;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #334155;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
         }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .site-name { font-size: 2.2rem; }
-            .site-tagline { font-size: 1rem; }
-            .official-btn { 
-                font-size: 2rem; 
-                padding: 1rem 2rem;
-            }
-            .section-title { font-size: 1.7rem; }
-            .features-grid { grid-template-columns: 1fr; }
-            .intro-points { grid-template-columns: 1fr; }
+        .site-intro {
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.8;
         }
-        @media (max-width: 480px) {
-            .container { padding: 0 15px; }
-            .site-name { font-size: 1.8rem; }
-            .official-btn { 
-                font-size: 1.7rem; 
-                padding: 0.8rem 1.5rem;
-            }
-            .intro-section { padding: 3rem 0 2rem; }
+
+        /* 移动端适配 */
+        @media (max-width: 640px) {
+            .hero-link { font-size: 2rem; }
+            nav ul { flex-wrap: wrap; }
+            nav ul li { margin: 5px 10px; }
         }
     </style>
 </head>
 <body>
-    <!-- 网站头部 -->
+
     <header>
-        <div class="container">
-            <h1 class="site-name">静态资源库</h1>
-            <p class="site-tagline">提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等，每日更新，助力开发者高效完成项目。</p>
-            <a href="https://static-resources.com" class="official-btn" target="_blank">进入官网</a>
-        </div>
+        <h1>我的资源网站名字</h1>
+        <a href="https://your-official-site.com" class="hero-link">进入官网</a>
     </header>
-    
-    <!-- 资源介绍部分 -->
-    <section class="intro-section">
-        <div class="container">
-            <h2 class="section-title">资源特点</h2>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📁</div>
-                    <h3 class="feature-title">海量资源</h3>
-                    <p class="feature-desc">收录超过2000个高质量静态资源，涵盖前端开发各个方面，持续更新中。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3 class="feature-title">快速下载</h3>
-                    <p class="feature-desc">采用全球CDN加速，确保资源在全球范围都能快速加载，提升开发效率。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">质量保证</h3>
-                    <p class="feature-desc">所有资源都经过专业筛选和测试，确保代码质量、兼容性和性能。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
-                    <h3 class="feature-title">完全免费</h3>
-                    <p class="feature-desc">所有资源均免费提供，无需注册，直接下载使用，无任何隐藏费用。</p>
-                </div>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">本站介绍</a></li>
+            <li><a href="#tools">常用工具</a></li>
+            <li><a href="#assets">设计素材</a></li>
+            <li><a href="#about">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <section id="intro" class="features">
+            <div class="feature-item">
+                <h3>极速加载</h3>
+                <p>纯 HTML/CSS 架构，拒绝冗余脚本，实现毫秒级页面响应。</p>
             </div>
-        </div>
-    </section>
-    
-    <!-- 网站底部 -->
+            <div class="feature-item">
+                <h3>纯净资源</h3>
+                <p>所有收录资源经过人工筛选，确保无毒、高效、高质量。</p>
+            </div>
+            <div class="feature-item">
+                <h3>多端适配</h3>
+                <p>无论在 PC、平板还是手机端，都能获得完美的浏览体验。</p>
+            </div>
+            <div class="feature-item">
+                <h3>持续更新</h3>
+                <p>每日收录最新互联网资源，让你始终站在行业前沿。</p>
+            </div>
+        </section>
+
+        <section id="tools" class="resource-section">
+            <h2 style="margin-bottom: 1.5rem;">热门资源推荐</h2>
+            <div class="resource-grid">
+                <a href="#" class="card">
+                    <h4>在线图片压缩</h4>
+                    <p>不损画质压缩图片，提升网站速度必备。</p>
+                </a>
+                <a href="#" class="card">
+                    <h4>配色方案生成器</h4>
+                    <p>一键生成专业级网页配色方案。</p>
+                </a>
+                <a href="#" class="card">
+                    <h4>代码格式化工具</h4>
+                    <p>支持多种语言，让你的代码整洁如新。</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
-        <div class="container">
-            <div class="site-intro">
-                <h3 class="intro-title">本站介绍</h3>
-            </div>
-            
-            <div class="intro-points">
-                <div class="intro-point">
-                    <h4 class="point-title">资源丰富</h4>
-                    <p class="point-desc">收录大量CSS样式、JavaScript插件、图标字体等静态资源，满足各种开发需求。</p>
-                </div>
-                
-                <div class="intro-point">
-                    <h4 class="point-title">更新及时</h4>
-                    <p class="point-desc">每日更新最新资源，紧跟技术发展趋势，确保资源的时效性和先进性。</p>
-                </div>
-                
-                <div class="intro-point">
-                    <h4 class="point-title">分类明确</h4>
-                    <p class="point-desc">资源按功能分类，便于快速查找，每个资源都有详细说明和使用示例。</p>
-                </div>
-                
-                <div class="intro-point">
-                    <h4 class="point-title">开源免费</h4>
-                    <p class="point-desc">所有资源均可免费下载使用，部分开源资源支持自定义修改和二次开发。</p>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>© 2023 静态资源库. 保留所有权利.</p>
-            </div>
+        <div class="site-intro">
+            <strong>站长说明：</strong> 这是一个专注极致速度的静态资源导航站。我们不存储任何非法文件，仅提供优质资源的链接索引。如果您发现失效链接，欢迎反馈。
         </div>
+        <p>&copy; 2026 资源导航站 | <a href="sitemap.xml" style="color:inherit;">网站地图</a></p>
     </footer>
-    
-    <!-- 简单交互效果 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 按钮点击效果
-            const btn = document.querySelector('.official-btn');
-            if(btn) {
-                btn.addEventListener('click', function(e) {
-                    // 创建涟漪效果
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size/2;
-                    const y = e.clientY - rect.top - size/2;
-                    
-                    ripple.style.cssText = `
-                        position: absolute;
-                        border-radius: 50%;
-                        background: rgba(255, 255, 255, 0.6);
-                        transform: scale(0);
-                        animation: ripple 0.6s linear;
-                        width: ${size}px;
-                        height: ${size}px;
-                        top: ${y}px;
-                        left: ${x}px;
-                        pointer-events: none;
-                    `;
-                    
-                    this.style.position = 'relative';
-                    this.style.overflow = 'hidden';
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => ripple.remove(), 600);
-                });
-            }
-            
-            // 添加动画样式
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes ripple {
-                    to { transform: scale(4); opacity: 0; }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // 滚动动画
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // 观察所有卡片元素
-            document.querySelectorAll('.feature-card, .intro-point').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(el);
-            });
-        });
-    </script>
+
 </body>
 </html>
