@@ -3,234 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>luckrom资源避难所官网|免费游戏资源下载中心</title>
-    <meta name="keywords" content="资源避难所,luckrom,游戏避难所,switch">
-    <meta name="description" content="luckrom资源避难所是一个免费的游戏资源网站，站内资源资源分类清楚，提供PC、安卓、苹果端的单机游戏、steam游戏、街机、主机和掌机模拟器游戏的下载，本站资源全部免费分享并且所有资源都是绿色版、无广告插件，无需注册即可高速安全下载，站内气氛和谐融洽，是一个游戏爱好者的交流平台。">
-    <meta name="author" content="luckrom资源避难所">
+    <title>静态资源库 | 免费网页开发资源下载中心</title>
+    <meta name="description" content="静态资源库提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等，助力开发者高效完成项目。">
+    <meta name="keywords" content="静态资源,CSS资源,JavaScript插件,免费下载,网页开发,前端资源">
+    <meta name="author" content="静态资源库">
+    <meta name="baidu-site-verification" content="code-xxxx">
+    <meta name="360-site-verification" content="xxxx">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="canonical" href="https://luckrom.github.io">
+    <style>
+        /* 重置与基础样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f8f9fa; 
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部 */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 3rem 0 4rem;
+            text-align: center;
+        }
+        .site-name {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .site-tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* 进入官网按钮 */
+        .official-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+            color: #1e3c72;
+            font-size: 2.5rem;
+            font-weight: 800;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 201, 255, 0.3);
+            transition: all 0.3s ease;
+            margin: 1.5rem 0;
+        }
+        .official-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 201, 255, 0.4);
+        }
+        
+        /* 资源介绍部分 */
+        .intro-section {
+            padding: 4rem 0 3rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 2.5rem;
+        }
+        
+        /* 资源特点网格 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .feature-title {
+            font-size: 1.3rem;
+            color: #1e3c72;
+            margin-bottom: 0.8rem;
+        }
+        .feature-desc {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        /* 网站底部 */
+        footer {
+            background-color: #1e293b;
+            color: #cbd5e1;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+        }
+        .site-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .intro-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* 网站介绍点 */
+        .intro-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .intro-point {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #00c9ff;
+        }
+        .point-title {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+        .point-desc {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* 底部版权 */
+        .copyright {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .site-name { font-size: 2.2rem; }
+            .site-tagline { font-size: 1rem; }
+            .official-btn { 
+                font-size: 2rem; 
+                padding: 1rem 2rem;
+            }
+            .section-title { font-size: 1.7rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .intro-points { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 15px; }
+            .site-name { font-size: 1.8rem; }
+            .official-btn { 
+                font-size: 1.7rem; 
+                padding: 0.8rem 1.5rem;
+            }
+            .intro-section { padding: 3rem 0 2rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">技术博客</a>
-            
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">首页</a></li>
-                    <li><a href="#categories" class="nav-link">分类</a></li>
-                    <li><a href="#about" class="nav-link">关于</a></li>
-                    <li><a href="#contact" class="nav-link">联系</a></li>
-                </ul>
-                
-                <div class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 主页头部 -->
-    <header class="main-header">
+    <!-- 网站头部 -->
+    <header>
         <div class="container">
-            <div class="header-content">
-                <h1 class="header-title">探索技术的无限可能</h1>
-                <p class="header-subtitle">每日分享前端开发、编程技巧和优质技术资源</p>
-                <a href="#latest-posts" class="cta-button">查看最新文章</a>
-            </div>
+            <h1 class="site-name">静态资源库</h1>
+            <p class="site-tagline">提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等，每日更新，助力开发者高效完成项目。</p>
+            <a href="https://static-resources.com" class="official-btn" target="_blank">进入官网</a>
         </div>
     </header>
-
-    <!-- 主要内容区 -->
-    <main class="main-content">
+    
+    <!-- 资源介绍部分 -->
+    <section class="intro-section">
         <div class="container">
-            <!-- 最新文章 -->
-            <section id="latest-posts" class="posts-section">
-                <h2 class="section-title">最新文章</h2>
-                
-                <div class="posts-grid">
-                    <!-- 文章1 -->
-                    <article class="post-card">
-                        <div class="post-category">前端开发</div>
-                        <div class="post-image">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzM2NmZmIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+UHJlLUNvdmVyIEltYWdlPC90ZXh0Pjwvc3ZnPg==" alt="CSS Grid布局指南" loading="lazy">
-                        </div>
-                        <div class="post-content">
-                            <h3><a href="blog-post.html" class="post-title">CSS Grid布局完全指南</a></h3>
-                            <p class="post-excerpt">掌握现代CSS布局系统，创建复杂的响应式网页布局...</p>
-                            <div class="post-meta">
-                                <span class="post-date">2023-10-15</span>
-                                <span class="post-read-time">8分钟阅读</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- 文章2 -->
-                    <article class="post-card">
-                        <div class="post-category">JavaScript</div>
-                        <div class="post-image">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjk1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+UHJlLUNvdmVyIEltYWdlPC90ZXh0Pjwvc3ZnPg==" alt="JavaScript性能优化" loading="lazy">
-                        </div>
-                        <div class="post-content">
-                            <h3><a href="#" class="post-title">JavaScript性能优化技巧</a></h3>
-                            <p class="post-excerpt">提升网站性能的关键JavaScript优化策略和实践方法...</p>
-                            <div class="post-meta">
-                                <span class="post-date">2023-10-10</span>
-                                <span class="post-read-time">12分钟阅读</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- 文章3 -->
-                    <article class="post-card">
-                        <div class="post-category">响应式设计</div>
-                        <div class="post-image">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNGNiZjYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+UHJlLUNvdmVyIEltYWdlPC90ZXh0Pjwvc3ZnPg==" alt="响应式设计" loading="lazy">
-                        </div>
-                        <div class="post-content">
-                            <h3><a href="#" class="post-title">移动优先的响应式设计策略</a></h3>
-                            <p class="post-excerpt">从移动设备开始构建响应式网站的最佳实践和技巧...</p>
-                            <div class="post-meta">
-                                <span class="post-date">2023-10-05</span>
-                                <span class="post-read-time">10分钟阅读</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="view-all">
-                    <a href="#" class="view-all-button">查看所有文章 →</a>
-                </div>
-            </section>
+            <h2 class="section-title">资源特点</h2>
             
-            <!-- 文章分类 -->
-            <section id="categories" class="categories-section">
-                <h2 class="section-title">文章分类</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3 class="feature-title">海量资源</h3>
+                    <p class="feature-desc">收录超过2000个高质量静态资源，涵盖前端开发各个方面，持续更新中。</p>
+                </div>
                 
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <div class="category-icon">💻</div>
-                        <h3>前端开发</h3>
-                        <p>HTML、CSS、JavaScript等前端技术</p>
-                        <span class="post-count">42篇文章</span>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon">🎨</div>
-                        <h3>UI/UX设计</h3>
-                        <p>用户界面和用户体验设计</p>
-                        <span class="post-count">28篇文章</span>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon">⚡</div>
-                        <h3>性能优化</h3>
-                        <p>网站速度和性能优化技巧</p>
-                        <span class="post-count">35篇文章</span>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon">🔧</div>
-                        <h3>工具资源</h3>
-                        <p>开发工具和实用资源推荐</p>
-                        <span class="post-count">56篇文章</span>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">快速下载</h3>
+                    <p class="feature-desc">采用全球CDN加速，确保资源在全球范围都能快速加载，提升开发效率。</p>
                 </div>
-            </section>
-            
-            <!-- 关于部分 -->
-            <section id="about" class="about-section">
-                <div class="about-content">
-                    <h2 class="section-title">关于本站</h2>
-                    <p>本站专注于分享前端开发、编程技巧和优质技术资源。我们的目标是帮助开发者提升技能，分享实用的开发经验和最新技术趋势。</p>
-                    <p>无论您是初学者还是经验丰富的开发者，都能在这里找到有价值的内容。所有文章都力求简洁明了，注重实践和应用。</p>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">质量保证</h3>
+                    <p class="feature-desc">所有资源都经过专业筛选和测试，确保代码质量、兼容性和性能。</p>
                 </div>
-            </section>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3 class="feature-title">完全免费</h3>
+                    <p class="feature-desc">所有资源均免费提供，无需注册，直接下载使用，无任何隐藏费用。</p>
+                </div>
+            </div>
         </div>
-    </main>
-
-    <!-- 页脚 -->
-    <footer id="contact" class="main-footer">
+    </section>
+    
+    <!-- 网站底部 -->
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3 class="footer-logo">技术博客</h3>
-                    <p>专注于技术分享和学习的个人博客</p>
-                    <p class="copyright">© 2023 技术博客. 保留所有权利.</p>
+            <div class="site-intro">
+                <h3 class="intro-title">本站介绍</h3>
+            </div>
+            
+            <div class="intro-points">
+                <div class="intro-point">
+                    <h4 class="point-title">资源丰富</h4>
+                    <p class="point-desc">收录大量CSS样式、JavaScript插件、图标字体等静态资源，满足各种开发需求。</p>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="#categories">分类</a></li>
-                        <li><a href="#about">关于</a></li>
-                        <li><a href="sitemap.xml">网站地图</a></li>
-                    </ul>
+                <div class="intro-point">
+                    <h4 class="point-title">更新及时</h4>
+                    <p class="point-desc">每日更新最新资源，紧跟技术发展趋势，确保资源的时效性和先进性。</p>
                 </div>
                 
-                <div class="footer-contact">
-                    <h4>联系我</h4>
-                    <p>如有问题或建议，欢迎联系</p>
-                    <p>邮箱: contact@example.com</p>
+                <div class="intro-point">
+                    <h4 class="point-title">分类明确</h4>
+                    <p class="point-desc">资源按功能分类，便于快速查找，每个资源都有详细说明和使用示例。</p>
                 </div>
+                
+                <div class="intro-point">
+                    <h4 class="point-title">开源免费</h4>
+                    <p class="point-desc">所有资源均可免费下载使用，部分开源资源支持自定义修改和二次开发。</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 静态资源库. 保留所有权利.</p>
             </div>
         </div>
     </footer>
-
+    
+    <!-- 简单交互效果 -->
     <script>
-        // 移动端导航切换
         document.addEventListener('DOMContentLoaded', function() {
-            const toggle = document.querySelector('.mobile-toggle');
-            const navList = document.querySelector('.nav-list');
-            
-            if(toggle) {
-                toggle.addEventListener('click', function() {
-                    navList.classList.toggle('active');
-                    this.classList.toggle('active');
+            // 按钮点击效果
+            const btn = document.querySelector('.official-btn');
+            if(btn) {
+                btn.addEventListener('click', function(e) {
+                    // 创建涟漪效果
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size/2;
+                    const y = e.clientY - rect.top - size/2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.6);
+                        transform: scale(0);
+                        animation: ripple 0.6s linear;
+                        width: ${size}px;
+                        height: ${size}px;
+                        top: ${y}px;
+                        left: ${x}px;
+                        pointer-events: none;
+                    `;
+                    
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => ripple.remove(), 600);
                 });
             }
             
-            // 平滑滚动
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    if(this.getAttribute('href') === '#') return;
-                    
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if(targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // 移动端点击后关闭菜单
-                        if(window.innerWidth <= 768) {
-                            navList.classList.remove('active');
-                            toggle.classList.remove('active');
-                        }
-                    }
-                });
-            });
+            // 添加动画样式
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ripple {
+                    to { transform: scale(4); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
             
-            // 页面加载优化
-            window.addEventListener('load', function() {
-                const images = document.querySelectorAll('img[loading="lazy"]');
-                images.forEach(img => {
-                    if(img.complete) {
-                        img.classList.add('loaded');
-                    } else {
-                        img.addEventListener('load', function() {
-                            this.classList.add('loaded');
-                        });
+            // 滚动动画
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
                     }
                 });
+            }, observerOptions);
+            
+            // 观察所有卡片元素
+            document.querySelectorAll('.feature-card, .intro-point').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
             });
         });
     </script>
