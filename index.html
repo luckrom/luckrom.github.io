@@ -2,68 +2,28 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>静态资源库 | 免费网页开发资源下载中心</title>
-    <meta name="description" content="静态资源库提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片、UI组件等，助力开发者高效完成项目。">
-    <meta name="keywords" content="静态资源,CSS资源,JavaScript插件,免费下载,网页开发,前端资源,图标字体,背景图片,UI组件,响应式设计">
+    <meta name="description" content="静态资源库提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等，助力开发者高效完成项目。">
+    <meta name="keywords" content="静态资源,CSS资源,JavaScript插件,免费下载,网页开发,前端资源">
     <meta name="author" content="静态资源库">
-    
-    <!-- 百度SEO优化 -->
     <meta name="baidu-site-verification" content="code-xxxx">
-    <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <meta name="robots" content="index,follow">
-    
-    <!-- 360SEO优化 -->
     <meta name="360-site-verification" content="xxxx">
     <meta name="renderer" content="webkit">
-    
-    <!-- 移动端优化 -->
-    <meta name="theme-color" content="#2c3e50">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    
-    <!-- 结构化数据，提升SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "静态资源库",
-      "url": "https://static-resources.com",
-      "description": "提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片等",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://static-resources.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
     <style>
-        /* CSS Reset 优化加载速度 */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; 
             line-height: 1.6; 
             color: #333; 
             background-color: #f8fafc; 
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        img { max-width: 100%; height: auto; }
-        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
-        ul, ol { list-style: none; }
-        
-        /* 容器样式 */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* 头部样式 - 高性能优化 */
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -72,7 +32,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .header-bg {
             position: absolute;
             top: 0;
@@ -85,16 +44,13 @@
                 linear-gradient(#eee .1em, transparent .1em);
             background-size: 100% 1.2em;
         }
-        
         .logo {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
             position: relative;
             display: inline-block;
         }
-        
         .logo::after {
             content: '';
             position: absolute;
@@ -105,7 +61,6 @@
             left: 30%;
             border-radius: 5px;
         }
-        
         .tagline {
             font-size: clamp(1rem, 2vw, 1.3rem);
             margin-bottom: 2rem;
@@ -115,7 +70,6 @@
             margin-right: auto;
             line-height: 1.8;
         }
-        
         .btn-primary {
             display: inline-block;
             background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
@@ -129,30 +83,22 @@
             box-shadow: 0 5px 20px rgba(0, 201, 255, 0.3);
             cursor: pointer;
         }
-        
         .btn-primary:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 201, 255, 0.4);
         }
-        
-        /* 主要内容区域 */
-        main {
-            padding: 5rem 0;
-        }
-        
+        main { padding: 5rem 0; }
         .section-title {
             text-align: center;
             margin-bottom: 3.5rem;
             position: relative;
         }
-        
         .section-title h2 {
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             color: #1e3c72;
             display: inline-block;
             padding-bottom: 1rem;
         }
-        
         .section-title h2::after {
             content: '';
             position: absolute;
@@ -164,7 +110,6 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
-        
         .section-subtitle {
             text-align: center;
             font-size: clamp(1rem, 2vw, 1.2rem);
@@ -173,31 +118,22 @@
             margin: 1.5rem auto 0;
             line-height: 1.8;
         }
-        
-        /* 特色板块样式 - 响应式网格 */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
         .feature-card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
             height: 100%;
-            position: relative;
             border: 1px solid #e2e8f0;
         }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
+        .feature-card:hover { transform: translateY(-10px); }
         .feature-icon {
             height: 80px;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -207,37 +143,30 @@
             color: white;
             font-size: 2.5rem;
         }
-        
         .feature-content {
             padding: 1.8rem;
         }
-        
         .feature-content h3 {
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: #1e3c72;
         }
-        
         .feature-content p {
             color: #64748b;
             line-height: 1.7;
         }
-        
-        /* 资源展示区 */
         .resources {
             margin-top: 5rem;
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             padding: 4rem 0;
             border-radius: 20px;
         }
-        
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1.8rem;
             margin-top: 3rem;
         }
-        
         .resource-item {
             background: white;
             border-radius: 12px;
@@ -246,24 +175,20 @@
             transition: all 0.3s ease;
             border-left: 4px solid #00c9ff;
         }
-        
         .resource-item:hover {
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             border-left-color: #92fe9d;
         }
-        
         .resource-item h4 {
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
             color: #1e3c72;
         }
-        
         .resource-item p {
             color: #64748b;
             font-size: 0.95rem;
             margin-bottom: 1.2rem;
         }
-        
         .resource-tag {
             display: inline-block;
             background: #e0f7fa;
@@ -273,189 +198,62 @@
             font-size: 0.85rem;
             font-weight: 600;
         }
-        
-        /* 使用统计 */
-        .stats {
-            margin-top: 5rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        
-        .stat-item {
-            background: white;
-            padding: 2rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            color: #64748b;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        
-        /* 简化的页脚样式 */
         footer {
             background: #1e293b;
             color: #cbd5e1;
             padding: 3rem 0;
             margin-top: 5rem;
         }
-        
         .footer-content {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
         }
-        
         .footer-logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: white;
             margin-bottom: 1rem;
         }
-        
         .footer-tagline {
             font-size: 1rem;
             color: #94a3b8;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
-        
         .copyright {
             padding-top: 2rem;
             border-top: 1px solid #334155;
             color: #94a3b8;
             font-size: 0.9rem;
         }
-        
-        /* 响应式设计 */
         @media (max-width: 768px) {
-            header {
-                padding: 3rem 0 2rem;
-            }
-            
-            .btn-primary {
-                padding: 0.8rem 1.8rem;
-                font-size: 1rem;
-            }
-            
-            main {
-                padding: 3rem 0;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .resource-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-            
-            .stat-item {
-                padding: 1.5rem 1rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
+            header { padding: 3rem 0 2rem; }
+            .btn-primary { padding: 0.8rem 1.8rem; font-size: 1rem; }
+            main { padding: 3rem 0; }
+            .features, .resource-grid { grid-template-columns: 1fr; gap: 1.5rem; }
         }
-        
         @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            header {
-                padding: 2.5rem 0 1.8rem;
-            }
-            
-            .logo {
-                font-size: 2.2rem;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .feature-content {
-                padding: 1.5rem;
-            }
-        }
-        
-        /* 打印样式 */
-        @media print {
-            .btn-primary, footer {
-                display: none;
-            }
-            
-            body {
-                color: #000;
-                background: #fff;
-            }
-        }
-        
-        /* 无障碍优化 */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* 加载优化 */
-        .lazy-load {
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        
-        .lazy-loaded {
-            opacity: 1;
+            .container { padding: 0 15px; }
+            header { padding: 2.5rem 0 1.8rem; }
+            .logo { font-size: 2.2rem; }
+            .section-title h2 { font-size: 1.8rem; }
+            .feature-content { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- 跳过导航链接（无障碍功能） -->
-    <a href="#main-content" class="sr-only">跳过导航直接进入主要内容</a>
-    
-    <!-- 头部 -->
     <header>
         <div class="header-bg"></div>
         <div class="container">
             <h1 class="logo">静态资源库</h1>
             <p class="tagline">提供高质量免费静态资源下载，包括CSS框架、JavaScript插件、图标字体、背景图片、UI组件等，每日更新，助力开发者高效完成项目。</p>
-            <a href="https://static-resources.com" class="btn-primary" aria-label="访问静态资源库官方网站">进入官网</a>
+            <a href="https://static-resources.com" class="btn-primary">进入官网</a>
         </div>
     </header>
 
-    <!-- 主要内容 -->
-    <main id="main-content">
+    <main>
         <div class="container">
-            <!-- 网站介绍 -->
             <section class="intro-section">
                 <div class="section-title">
                     <h2>为什么选择静态资源库？</h2>
@@ -464,9 +262,7 @@
                 
                 <div class="features">
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <span>🎯</span>
-                        </div>
+                        <div class="feature-icon">🎯</div>
                         <div class="feature-content">
                             <h3>高质量资源</h3>
                             <p>所有资源都经过专业筛选和测试，确保代码质量、兼容性和性能，节省您的开发时间。</p>
@@ -474,9 +270,7 @@
                     </div>
                     
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <span>🚀</span>
-                        </div>
+                        <div class="feature-icon">🚀</div>
                         <div class="feature-content">
                             <h3>快速下载</h3>
                             <p>采用全球CDN加速，确保资源在全球范围都能快速加载，提升您的开发效率。</p>
@@ -484,9 +278,7 @@
                     </div>
                     
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <span>🆓</span>
-                        </div>
+                        <div class="feature-icon">🆓</div>
                         <div class="feature-content">
                             <h3>完全免费</h3>
                             <p>所有资源均免费提供，无需注册，无需订阅，直接下载使用，无任何隐藏费用。</p>
@@ -495,7 +287,6 @@
                 </div>
             </section>
             
-            <!-- 资源展示 -->
             <section class="resources">
                 <div class="section-title">
                     <h2>热门资源分类</h2>
@@ -526,93 +317,28 @@
                         <p>网页背景图案、纹理、渐变背景、占位图片、无版权图片资源。</p>
                         <span class="resource-tag">289个资源</span>
                     </div>
-                    
-                    <div class="resource-item">
-                        <h4>UI组件库</h4>
-                        <p>完整的UI组件集合，包括导航栏、页脚、侧边栏、卡片、表格等。</p>
-                        <span class="resource-tag">174个资源</span>
-                    </div>
-                    
-                    <div class="resource-item">
-                        <h4>工具与实用程序</h4>
-                        <p>开发工具、代码片段、实用函数、性能优化工具等辅助开发资源。</p>
-                        <span class="resource-tag">256个资源</span>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- 统计数据 -->
-            <section class="stats-section">
-                <div class="section-title">
-                    <h2>我们的影响力</h2>
-                    <p class="section-subtitle">自成立以来，我们已为全球开发者提供了大量优质资源</p>
-                </div>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">2,180+</div>
-                        <div class="stat-label">高质量资源</div>
-                    </div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-number">84,500+</div>
-                        <div class="stat-label">开发者用户</div>
-                    </div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-number">1.2M+</div>
-                        <div class="stat-label">资源下载量</div>
-                    </div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-number">99.2%</div>
-                        <div class="stat-label">用户满意度</div>
-                    </div>
                 </div>
             </section>
         </div>
     </main>
     
-    <!-- 简化版页脚 -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">静态资源库</div>
                 <p class="footer-tagline">致力于为全球开发者提供高质量免费静态资源，助力高效开发</p>
                 <div class="copyright">
-                    <p>&copy; 2023 静态资源库. 保留所有权利. 京ICP备12345678号 | 遵循CC BY-NC 4.0许可证</p>
-                    <p>本网站仅提供资源索引，所有资源版权归原作者所有。</p>
+                    <p>&copy; 2023 静态资源库. 保留所有权利. 京ICP备12345678号</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- 性能优化和内联脚本 -->
     <script>
-        // 简单的懒加载实现
         document.addEventListener('DOMContentLoaded', function() {
-            // 模拟图片懒加载
-            const lazyImages = document.querySelectorAll('.lazy-load');
-            
-            const imageObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.classList.add('lazy-loaded');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            lazyImages.forEach(function(img) {
-                imageObserver.observe(img);
-            });
-            
-            // 按钮点击动画
             const buttons = document.querySelectorAll('.btn-primary');
             buttons.forEach(button => {
                 button.addEventListener('click', function(e) {
-                    // 创建点击效果
                     const ripple = document.createElement('span');
                     const rect = this.getBoundingClientRect();
                     const size = Math.max(rect.width, rect.height);
@@ -640,7 +366,6 @@
                 });
             });
             
-            // 添加动画样式
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes ripple-animation {
@@ -651,28 +376,7 @@
                 }
             `;
             document.head.appendChild(style);
-            
-            // 记录页面加载时间（性能监控）
-            window.addEventListener('load', () => {
-                const timing = performance.timing;
-                const loadTime = timing.loadEventEnd - timing.navigationStart;
-                console.log(`页面加载时间: ${loadTime}ms`);
-                
-                // 可以将此数据发送到分析服务
-                if (loadTime < 1000) {
-                    console.log('页面加载速度优秀');
-                }
-            });
         });
-        
-        // 百度统计代码示例（请替换为您的实际代码）
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxx";
-            var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-        })();
     </script>
 </body>
 </html>
