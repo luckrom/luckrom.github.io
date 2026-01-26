@@ -1,316 +1,315 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US" dir="ltr" class="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>luckrom资源避难所官网|免费游戏资源下载中心</title>
-    <meta name="keywords" content="资源避难所,luckrom,游戏避难所,switch">
-    <meta name="description" content="luckrom资源避难所是一个免费的游戏资源网站，提供PC、安卓、苹果端的单机游戏、steam游戏、街机、主机和掌机游戏的下载，本站所有资源都是绿色版、无广告插件，无需注册即可高速安全下载，站内气氛和谐融洽，是一个游戏爱好者的交流平台。。">
-    <meta name="author" content="luckrom资源避难所">
-    <meta name="renderer" content="webkit">
-    <style>
-        /* 重置与基础样式 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', 'Micros/t YaHei', sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #f8f9fa; 
-        }
-        。container {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* 头部 */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 3rem 0 4rem;
-            text-align: center;
-        }
-        。site-name {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        .site-tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        /* 进入官网按钮 */
-        .official-btn {
-            text-decoration: none;
-            border: none; 
-            outline: none;   
-            display: inline-block;
-            background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
-            color: #1e3c72;
-            font-size: 2.5rem;
-            font-weight: 800;
-            padding: 1.2rem 3rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 201, 255, 0.3);
-            transition: all 0.3s ease;
-            margin: 1.5rem 0;
-        }
-        .official-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 201, 255, 0.4);
-        }
-        
-        /* 资源介绍部分 */
-        .intro-section {
-            padding: 4rem 0 3rem;
-        }
-        。section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #1e3c72;
-            margin-bottom: 2.5rem;
-        }
-        
-        /* 资源特点网格 */
-        。features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        。feature-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        。feature-card:hover {
-            transform: translateY(-8px);
-        }
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .feature-title {
-            font-size: 1.3rem;
-            color: #1e3c72;
-            margin-bottom: 0.8rem;
-        }
-        。feature-desc {
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        /* 网站底部 */
-        footer {
-            background-color: #1e293b;
-            color: #cbd5e1;
-            padding: 2.5rem 0;
-            margin-top: 3rem;
-        }
-        。site-intro {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .intro-title {
-            font-size: 1.5rem;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* 网站介绍点 */
-        。intro-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        。intro-point {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #00c9ff;
-        }
-        .point-title {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-        }
-        .point-desc {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        /* 底部版权 */
-        .copyright {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #334155;
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            。site-name { font-size: 2.2rem; }
-            .site-tagline { font-size: 1rem; }
-            .official-btn { 
-                font-size: 2rem; 
-                padding: 1rem 2rem;
-            }
-            .section-title { font-size: 1.7rem; }
-            .features-grid { grid-template-columns: 1fr; }
-            .intro-points { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 480px) {
-            .container { padding: 0 15px; }
-            .site-name { font-size: 1.8rem; }
-            .official-btn { 
-                font-size: 1.7rem; 
-                padding: 0.8rem 1.5rem;
-            }
-            .intro-section { padding: 3rem 0 2rem; }
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>24h搜书网官网 - 免费电子书下载与在线阅读平台|入口</title>
+  <meta name="keywords" content="24h搜书网, 电子书下载, 在线阅读, 免费书籍" />
+  <meta name="description" content="24h搜书网是基于IPFS技术的免费电子书平台，提供13万+本多格式电子书下载与在线阅读，支持AI辅助功能，无广告干扰。">
+
+  <link rel="shortcut icon" href="./files/24hbook.png">
+  <link rel="preload stylesheet" href="./files/style.9b4b7f3f.css" as="style">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4096ff',
+            secondary: '#722ed1',
+            dark: '#1E1E2E',
+            light: '#F5F5F5',
+            'dark-gray': '#4E4E5E',
+            'light-gray': '#E5E5E5'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .nav-link {
+        @apply relative text-dark-gray hover:text-primary transition-colors duration-300;
+      }
+      .nav-link::after {
+        @apply content-[''] absolute w-0 h-0.5 bg-primary left-0 -bottom-1 transition-all duration-300;
+      }
+      .nav-link:hover::after {
+        @apply w-full;
+      }
+      .nav-link.active {
+        @apply text-primary font-medium;
+      }
+      .nav-link.active::after {
+        @apply w-full;
+      }
+      .btn-primary {
+        @apply bg-primary hover:bg-primary/90 text-white font-medium py-2 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5;
+      }
+      .btn-secondary {
+        @apply bg-white border border-primary text-primary hover:bg-primary/5 font-medium py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+      }
+      .feature-card {
+        @apply bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+      }
+      .faq-title {
+        @apply text-[clamp(1.5rem,3vw,2rem)] font-bold text-dark mb-6;
+      }
+      .title {
+        @apply text-xl font-bold text-dark mb-3;
+      }
+      .details {
+        @apply text-dark-gray leading-relaxed;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- 网站头部 -->
-    <header>
-        <div class="container">
-            <h1 class="site-name">luckrom资源避难所</h1>
-            <p class="site-tagline">提供高质量的游戏资源下载，包括psp、psv、switch、ps2、sfc、ps3、steam等游戏。</p>
-            <a href="http://oldman.ysepan.com/" class="official-btn" target="_blank">进入官网</a>
+  <div id="app">
+    <!-- 新增导航栏 -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="./files/24hbook.png" alt="24h搜书网" class="h-10 mr-2">
+          <a href="#" target="_blank" class="text-xl font-bold text-primary">24h搜书网</a>
         </div>
-    </header>
-    
-    <!-- 资源介绍部分 -->
-    <section class="intro-section">
-        <div class="container">
-            <h2 class="section-title">luckrom资源避难所的特点</h2>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📁</div>
-                    <h3 class="feature-title">海量资源</h3>
-                    <p class="feature-desc">收录超过200000个高质量游戏资源，持续更新中。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3 class="feature-title">无需注册即可下载</h3>
-                    <p class="feature-desc">采用全球CDN加速，确保资源在全球范围都能快速加载，提升开发效率。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">质量保证</h3>
-                    <p class="feature-desc">所有资源都经过专业筛选和测试，确保都是绿色、无插件广告版本。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
-                    <h3 class="feature-title">完全免费</h3>
-                    <p class="feature-desc">所有资源均免费提供，海量资源每日更新。</p>
-                </div>
-            </div>
+
+        
+        <!-- 桌面导航 -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link active">首页</a>
+          <a href="#about" class="nav-link">网站简介</a>
+          <a href="#features" class="nav-link">功能特点</a>
         </div>
-    </section>
-    
-    <!-- 网站底部 -->
-    <footer>
-        <div class="container">
-            <div class="site-intro">
-                <h3 class="intro-title">本站介绍</h3>
-            </div>
-            
-            <div class="intro-points">
-                <div class="intro-point">
-                    <h4 class="point-title">资源丰富</h4>
-                    <p class="point-desc">收录大量CSS样式、JavaScript插件、图标字体等静态资源，满足各种开发需求。</p>
-                </div>
-          
-            </div>
-            
-            <div class="copyright">
-                <p>© 2023 静态资源库. 保留所有权利.</p>
-            </div>
+        
+        <!-- 移动端菜单按钮 -->
+        <button id="menu-toggle" class="md:hidden text-dark-gray hover:text-primary focus:outline-none">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+      
+      <!-- 移动端导航菜单 -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-light-gray shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <a href="#home" class="nav-link py-2 active">首页</a>
+          <a href="#about" class="nav-link py-2">网站简介</a>
+          <a href="#features" class="nav-link py-2">功能特点</a>
         </div>
-    </footer>
+      </div>
+    </nav>
+
+    <div class="Layout" data-v-b2cf3e0b="">
+      <div class="VPContent is-home" id="VPContent" data-v-b2cf3e0b="" data-v-a494bd1d="">
+        <div id="home" class="VPHome pt-24" data-v-a494bd1d="" data-v-d82743a8="">
+          <div class="VPHero has-image VPHomeHero" data-v-d82743a8="" data-v-fd2650d5="">
+            <div class="container" data-v-fd2650d5="">
+              <div class="main" data-v-fd2650d5="">
+                <h1 class="name" data-v-fd2650d5="" style="display: flex; align-items: center; white-space: nowrap;">
+                  <span style="color:#111;">24h搜书网</span>
+                </h1>
+
+                <p class="text" data-v-fd2650d5="" style="line-height:1.2rem;margin:10px 0;"><span
+                    style="font-size:1rem;font-weight:400;">13万+本多格式电子书，免费下载与在线阅读，支持AI辅助功能，无广告干扰。</span></p>
+                <div class="actions" data-v-fd2650d5="">
+                  <div class="action" data-v-fd2650d5=""><a class="VPButton medium brand"
+                      href="https://24hsoushu.ggonav.com/" target="_blank" data-v-fd2650d5=""
+                      data-v-567ba664="">
+                      官网入口</a></div>
+
+                  <div class="action" data-v-fd2650d5=""><a class="VPButton medium alt" href="https://wangpanziyuan.pages.dev/" target="_blank"   content="nofollow"  data-v-fd2650d5="" data-v-567ba664="">电子书/电影动漫/音乐下载</a></div>
+                </div>
+              </div>
+
+              <div class="image" data-v-fd2650d5=""><div class="image-container" data-v-fd2650d5=""><div
+                    class="image-bg" data-v-fd2650d5=""></div><img class="VPImage image-src"
+                    src="./files/24hbook.jpg" alt="24h搜书网" data-v-6db2186b=""
+                    style="border-radius:15px;background: #fff;padding: 5px;border: 1px solid #eee;"></div></div>
+          </div>
+        </div>
+
+        <!-- 新增的网站介绍版块 -->
+        <div id="about" class="VPFeatures VPHomeFeatures" data-v-d82743a8="" data-v-ba861f23="">
+          <h2 class="faq-title" style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">
+            24h搜书网是什么？
+          </h2>
+          <div class="container" data-v-ba861f23="">
+            <div class="items" data-v-ba861f23="" style="margin-bottom: 40px;">
+              <div class="grid-1 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="box feature-card" data-v-837f6cca="">
+                    <p class="details" data-v-837f6cca="" style="font-size: 16px; line-height: 1.8;">
+                      24h搜书网是一个功能强大的免费电子书下载平台，基于IPFS（星际文件系统）技术搭建，旨在为用户提供稳定、丰富的电子书下载与在线阅读服务。该平台收录了超过13万本电子书，涵盖文学、心理、艺术、设计、小说、哲学、历史、宗教、计算机、理财、政治、军事和儿童教育等多个领域。用户可以通过书名、作者、出版社、ISBN编号等多种方式快速找到并下载所需书籍。
+                    </p>
+                    <p class="details" data-v-837f6cca="" style="font-size: 16px; line-height: 1.8; margin-top: 15px;">
+                      24h搜书网的界面简洁美观，分类清晰，易于用户快速找到喜欢的书籍类型。它不仅支持PDF、EPUB、MOBI、AZW3等多种主流电子书格式的下载，还整合了Koodo Reader开源阅读器，提供在线阅读功能，用户可以调整字体大小、背景颜色、视图比例等参数，提升阅读体验。此外，平台还内置AI工具，支持AI生成大纲和文书辅助功能，帮助用户快速了解书籍内容。
+                    </p></article></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="features" class="VPFeatures VPHomeFeatures" data-v-d82743a8="" data-v-ba861f23="">
+          <h2 class="faq-title" style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">
+            24h搜书网功能特点
+          </h2>
+          <div class="container" data-v-ba861f23="">
+            <div class="items" data-v-ba861f23="" style="margin-bottom: 40px;">
+
+              <div class="grid-3 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553=""><article
+                    class="box feature-card" data-v-837f6cca="">
+                    <h3 class="title" data-v-837f6cca="">1.多样化的搜索方式</h3>
+                    <p class="details" data-v-837f6cca="">
+                      24h搜书网支持通过书名、作者、出版社、ISBN编号及模糊关键词等多种方式进行精准或模糊搜索。用户可以根据自己的需求选择合适的搜索条件，快速定位到所需的书籍。无论是寻找经典名著还是最新畅销书，都能轻松找到。
+                    </p>
+                  </article></span>
+              </div>
+
+              <div class="grid-3 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553=""><article
+                    class="box feature-card" data-v-837f6cca="">
+                    <h3 class="title" data-v-837f6cca="">2.丰富的资源分类</h3>
+                    <p class="details" data-v-837f6cca="">
+                      该平台对资源进行了细致分类，涵盖多个学科领域。用户可以按书籍类型分类浏览，探索更多感兴趣的资源。无论是文学爱好者还是专业领域的读者，都能在这里找到适合自己的书籍。
+                    </p>
+                  </article></span>
+              </div>
+
+              <div class="grid-3 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553=""><article
+                    class="box feature-card" data-v-837f6cca="">
+                    <h3 class="title" data-v-837f6cca="">3.多格式支持与在线阅读</h3>
+                    <p class="details" data-v-837f6cca="">
+                      24h搜书网提供PDF、EPUB、MOBI、AZW3等多种主流电子书格式的下载，满足不同阅读设备的需求。此外，平台还支持在线预览和阅读，用户可以在不下载的情况下查看书籍的封面、简介、目录等内容。在线阅读界面还提供护眼模式、仿真翻页效果等功能，提升阅读舒适度。
+                    </p>
+                  </article></span>
+              </div>
+
+              <div class="grid-3 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553=""><article
+                    class="box feature-card" data-v-837f6cca="">
+                    <h3 class="title" data-v-837f6cca="">4.AI辅助阅读功能</h3>
+                    <p class="details" data-v-837f6cca="">
+                      24h搜书网内置AI工具，具备AI生成大纲、文书辅助等功能。用户可以一键生成书籍大纲，快速了解书籍的主要内容。此外，平台还可以根据用户的需求推荐相关书籍，帮助用户发现更多感兴趣的读物。
+                    </p>
+                  </article></span>
+              </div>
+
+              <div class="grid-3 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553=""><article
+                    class="box feature-card" data-v-837f6cca="">
+                    <h3 class="title" data-v-837f6cca="">5.无广告体验</h3>
+                    <p class="details" data-v-837f6cca="">
+                      24h搜书网完全免费，无需注册或登录，无广告干扰。用户可以专注于书籍的搜索、下载和阅读，享受纯净的阅读体验。
+                    </p>
+                  </article></span>
+              </div>
+
+              <div class="grid-3 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553=""><article
+                    class="box feature-card" data-v-837f6cca="">
+                    <h3 class="title" data-v-837f6cca="">6.多设备兼容</h3>
+                    <p class="details" data-v-837f6cca="">
+                      24h搜书网支持电脑、手机和平板等多种设备，适配性强。用户可以根据自己的需求，在不同设备上随时阅读下载的书籍，满足不同场景下的阅读需求。
+                    </p>
+                  </article></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="VPFooter" data-v-b2cf3e0b="" data-v-f7fc41f4=""><div class="container" data-v-f7fc41f4=""><p class="copyright" data-v-f7fc41f4=""><strong>按Ctrl+D键组合加入你的浏览器收藏夹，后续持续更新最新网址</strong></p>
+
+    <p class="copyright" data-v-f7fc41f4="">Copyright ©2025 24h搜书网</p>
+         </div></footer>
+
+    </div>
+  </div>
+
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-md');
+        navbar.classList.add('py-2');
+        navbar.classList.remove('py-3');
+      } else {
+        navbar.classList.remove('shadow-md');
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-2');
+      }
+      
+      // 更新导航栏激活状态
+      const sections = document.querySelectorAll('div[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
     
-    <!-- 简单交互效果 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 按钮点击效果
-            const btn = document.querySelector('.official-btn');
-            if(btn) {
-                btn.addEventListener('click', function(e) {
-                    // 创建涟漪效果
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size/2;
-                    const y = e.clientY - rect.top - size/2;
-                    
-                    ripple.style.cssText = `
-                        position: absolute;
-                        border-radius: 50%;
-                        background: rgba(255, 255, 255, 0.6);
-                        transform: scale(0);
-                        animation: ripple 0.6s linear;
-                        width: ${size}px;
-                        height: ${size}px;
-                        top: ${y}px;
-                        left: ${x}px;
-                        pointer-events: none;
-                    `;
-                    
-                    this.style.position = 'relative';
-                    this.style.overflow = 'hidden';
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => ripple.remove(), 600);
-                });
-            }
-            
-            // 添加动画样式
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes ripple {
-                    to { transform: scale(4); opacity: 0; }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // 滚动动画
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // 观察所有卡片元素
-            document.querySelectorAll('.feature-card, .intro-point').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(el);
-            });
-        });
-    </script>
+    // 移动端菜单切换
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // 关闭移动端菜单（如果打开）
+        document.getElementById('mobile-menu').classList.add('hidden');
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
